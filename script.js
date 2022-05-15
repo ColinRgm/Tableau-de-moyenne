@@ -118,10 +118,10 @@ function arrayConstitutionAveragePlusWeight() {
     // Réussi ou échec ------------------
     function yesOrNo(average){
         if (average <= 4.5){
-            return "Il faut bosser un peu là, non ?"
+            return "Courage, tu peux le faire !"
         }
         else {
-            return "Bien ouej le reuf"
+            return "Félicitation ! 🎉"
         }
     }
 
