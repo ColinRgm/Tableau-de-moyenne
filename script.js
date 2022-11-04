@@ -120,6 +120,9 @@ function arrayConstitutionAveragePlusWeight() {
         if (average <= 4.5){
             return "Courage, tu peux le faire !"
         }
+        else if (average === 0){
+            return "Pas de note = pas de moyenne"
+        }
         else {
             return "Félicitation ! 🎉"
         }
