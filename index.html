@@ -1,549 +1,518 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-    />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 
-    <link type="text/css" rel="sytlesheet" href="style.css" />
-
-    <title class="titre text-align-center">Moyenne EPSIC</title>
+    <title>Calculateur de moyenne</title>
 </head>
 <body>
-<h1 class="text-center pb-4 pt-3 bg-dark text-light">
-    Mon tableau de moyennes CFC
-</h1>
 
-<!-- Tableau N°1 --------------------------------------------------------------------------------------------------->
+<!-- Note finale -->
+<div class="resultat">
+    <h1>
+        <div id="passOrFailed"></div>
+        <div>Note finale :</div>
+        <div id="cfc"></div>
+    </h1>
 
-<div class="container mt-4">
-    <div class="row mb-2">
-        <div class="col offset-2 col-8 text-center bg-dark text-light pt-1">
-            <h3>Math et Anglais</h3>
+</div>
+<!-- Général -->
+<div class="grid-container">
+    <div class="left">
+
+        <!-- Math -->
+        <h2>Math</h2>
+        <div class="grid-container2">
+            <div class="semestre1">
+                <h3 class="title">Semestre 1</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_1" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_2" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_3" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_4" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_5" aria-label="" value=""/>
+            </div>
+
+            <div class="semestre2">
+                <h3 class="title">Semestre 2</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_6" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_7" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_8" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_9" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_10" aria-label="" value=""/>
+            </div>
+            <div class="semestre3">
+                <h3 class="title">Semestre 3</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_11" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_12" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_13" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_14" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_15" aria-label="" value=""/>
+            </div>
+            <div class="semestre4">
+                <h3 class="title">Semestre 4</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_16" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_17" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_18" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_19" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_20" aria-label="" value=""/>
+            </div>
+            <div class="semestre5">
+                <h3 class="title">Semestre 5</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_21" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_22" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_23" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_24" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_25" aria-label="" value=""/>
+            </div>
+            <div class="semestre6">
+                <h3 class="title">Semestre 6</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_26" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_27" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_28" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_29" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_30" aria-label="" value=""/>
+            </div>
+            <div class="semestre7">
+                <h3 class="title">Semestre 7</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_31" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_32" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_33" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_34" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_35" aria-label="" value=""/>
+            </div>
+            <div class="semestre8">
+                <h3 class="title">Semestre 8</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_36" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_37" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_38" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_39" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="math_40" aria-label="" value=""/>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Anglais -->
+        <h2>Anglais</h2>
+        <div class="grid-container2">
+            <div class="semestre1">
+                <h3 class="title">Semestre 1</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_1" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_2" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_3" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_4" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_5" aria-label=""
+                       value=""/>
+            </div>
+            <div class="semestre2">
+                <h3 class="title">Semestre 2</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_6" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_7" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_8" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_9" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_10" aria-label=""
+                       value=""/>
+            </div>
+            <div class="semestre3">
+                <h3 class="title">Semestre 3</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_11" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_12" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_13" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_14" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_15" aria-label=""
+                       value=""/>
+            </div>
+            <div class="semestre4">
+                <h3 class="title">Semestre 4</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_16" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_17" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_18" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_19" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_20" aria-label=""
+                       value=""/>
+            </div>
+            <div class="semestre5">
+                <h3 class="title">Semestre 5</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_21" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_22" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_23" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_24" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_25" aria-label=""
+                       value=""/>
+            </div>
+            <div class="semestre6">
+                <h3 class="title">Semestre 6</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_26" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_27" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_28" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_29" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_30" aria-label=""
+                       value=""/>
+            </div>
+            <div class="semestre7">
+                <h3 class="title">Semestre 7</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_31" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_32" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_33" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_34" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_35" aria-label=""
+                       value=""/>
+            </div>
+            <div class="semestre8">
+                <h3 class="title">Semestre 8</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_36" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_37" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_38" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_39" aria-label=""
+                       value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="anglais_40" aria-label=""
+                       value=""/>
+            </div>
+        </div>
+        <hr>
+
+        <!-- ECG -->
+        <h2>ECG</h2>
+        <div class="grid-container2">
+            <div class="semestre1">
+                <h3 class="title">Semestre 1</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_1" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_2" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_3" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_4" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_5" aria-label="" value=""/>
+            </div>
+            <div class="semestre2">
+                <h3 class="title">Semestre 2</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_6" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_7" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_8" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_9" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_10" aria-label="" value=""/>
+            </div>
+            <div class="semestre3">
+                <h3 class="title">Semestre 3</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_11" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_12" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_13" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_14" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_15" aria-label="" value=""/>
+            </div>
+            <div class="semestre4">
+                <h3 class="title">Semestre 4</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_16" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_17" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_18" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_19" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_20" aria-label="" value=""/>
+            </div>
+            <div class="semestre5">
+                <h3 class="title">Semestre 5</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_21" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_22" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_23" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_24" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_25" aria-label="" value=""/>
+            </div>
+            <div class="semestre6">
+                <h3 class="title">Semestre 6</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_26" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_27" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_28" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_29" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_30" aria-label="" value=""/>
+            </div>
+            <div class="semestre7">
+                <h3 class="title">Semestre 7</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_31" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_32" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_33" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_34" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_35" aria-label="" value=""/>
+            </div>
+            <div class="semestre8">
+                <h3 class="title">Semestre 8</h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_36" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_37" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_38" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_39" aria-label="" value=""/>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="ecg_40" aria-label="" value=""/>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Module 1ère année -->
+        <h2>1ère Année</h2>
+        <div class="grid-container5">
+            <div class="epsic">
+                <div class="module">
+                    <h3>Module 117</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_117" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 122</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_122" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 162</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_162" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 164</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_164" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 231</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_231" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 293</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_293" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 319</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_319" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 431</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_431" aria-label=""
+                           value=""/>
+                </div>
+            </div>
+
+            <div class="cie">
+                <div class="module">
+                    <h3>CIE 106</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_106" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>CIE 110</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_110" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>CIE 187</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_187" aria-label=""
+                           value=""/>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Module 2ème année -->
+        <h2>2ème Année</h2>
+        <div class="grid-container5">
+            <div class="epsic">
+                <div class="module">
+                    <h3>Module 114</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_114" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 165</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_165" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 254</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_254" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 320</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_320" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 322</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_322" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 346</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_346" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 347</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_347" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 426</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_426" aria-label=""
+                           value=""/>
+                </div>
+            </div>
+            <div class="cie">
+                <div class="module">
+                    <h3>CIE 259</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_259" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>CIE 294</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_294" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>CIE 295</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_295" aria-label=""
+                           value=""/>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Module 3ème année -->
+        <h2>3ème Année</h2>
+        <div class="grid-container5">
+            <div class="epsic">
+                <div class="module">
+                    <h3>Module 184</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_184" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 232</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_232" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 306</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_306" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 450</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_450" aria-label=""
+                           value=""/>
+                </div>
+            </div>
+            <div class="cie">
+                <div class="module">
+                    <h3>CIE ?</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_?" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>CIE 185</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_185" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>CIE 217</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_217" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>CIE 223</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_223" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>CIE 335</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="cie_335" aria-label=""
+                           value=""/>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Module 4ème année -->
+        <h2>4ème Année</h2>
+        <div class="grid-container5">
+            <div class="epsic">
+                <div class="module">
+                    <h3>Module 241</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_241" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 245</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_245" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 321</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_321" aria-label=""
+                           value=""/>
+                </div>
+                <div class="module">
+                    <h3>Module 324</h3>
+                    <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="module_324" aria-label=""
+                           value=""/>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Math 1</p>
-        </div>
+    <div class="right">
 
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="math_1"
-                    aria-label=""
-            />
-
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Math 2</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="math_2"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Math 3</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="math_3"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Anglais 1</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="english_1"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Anglais 2</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="english_2"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Anglais 3</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="english_3"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Anglais 4</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="english_4"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-10">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Anglais 5</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="english_5"
-                    aria-label=""
-            />
+        <!-- Moyenne -->
+        <div class="grid-container6">
+            <div>
+                <h3>Compètence de base élargie : </h3>
+                <div id="baseElargie"></div>
+            </div>
+            <div>
+                <h3>Culture générale : </h3>
+                <div id="cultureG"></div>
+            </div>
+            <div>
+                <h3>Compètence en informatique : </h3>
+                <div id="informatique"></div>
+            </div>
+            <div class="tpi">
+                <h3>TPI : </h3>
+                <input class="input" type="number" step="0.5" max="6" min="1" placeholder="Note" id="tpi" aria-label="" value=""/>
+            </div>
         </div>
     </div>
 </div>
 
-<!--Tableau N°2----------------------------------------------------------------------------------------------------->
-
-<div class="container mt-4">
-    <div class="row mb-2 mt-4">
-        <div class="col offset-2 col-8 text-center bg-dark text-light pt-1">
-            <h3>Moyennes ECG</h3>
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div class="col offset-2 col-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="ecg_1"
-                    aria-label=""
-            />
-        </div>
-
-        <div class="col offset-1 col-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="ecg_2"
-                    aria-label=""
-            />
-        </div>
-
-        <div class="col offset-1 col-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="ecg_3"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div class="col offset-2 col-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="ecg_4"
-                    aria-label=""
-            />
-        </div>
-
-        <div class="col offset-1 col-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="ecg_5"
-                    aria-label=""
-            />
-        </div>
-
-        <div class="col offset-1 col-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="ecg_6"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div class="col offset-3 col-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="ecg_7"
-                    aria-label=""
-            />
-        </div>
-
-        <div class="col offset-2 col-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="ecg_8"
-                    aria-label=""
-            />
-        </div>
-    </div>
-</div>
-
-<!--Tableau N°3----------------------------------------------------------------------------------------------------->
-
-<div class="container mt-4">
-    <div class="row mb-2 mt-4">
-        <div class="col offset-2 col-8 text-center bg-dark text-light pt-1">
-            <h3>Moyennes Modules</h3>
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Modules</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="module"
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-5 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">CIE</p>
-        </div>
-
-        <div class="col col-1 offset-2 text-center">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="cie"
-                    aria-label=""
-            />
-        </div>
-    </div>
-</div>
-
-<!--Table N°4------------------------------------------------------------------------------------------------------->
-
-<div class="container mt-4">
-    <div class="row mb-2 mt-4">
-        <div class="col offset-2 col-8 text-center bg-dark text-light pt-1">
-            <h3>Moyennes Générales</h3>
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-3 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Compètence de base élargie</p>
-        </div>
-
-        <div id="cbe" class="col col-1 offset-1 text-center border border-black">
-
-        </div>
-
-        <div class="col offset-2 col-1 text-center">
-            <input
-                    type="number"
-                    step="10"
-                    max="100"
-                    min="10"
-                    class="form-control mt-2"
-                    placeholder="%"
-                    style="text-align: center"
-                    id="percent-cbe"
-                    value=10
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-3 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Culture Générale</p>
-        </div>
-
-        <div id="ecg" class="col col-1 offset-1 text-center border border-black">
-
-        </div>
-
-        <div class="col offset-2 col-1 text-center">
-            <input
-                    type="number"
-                    step="10"
-                    max="100"
-                    min="10"
-                    class="form-control mt-2"
-                    placeholder="%"
-                    style="text-align: center"
-                    id="percent-ecg"
-                    value=20
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-3 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">Compètences en Informatique</p>
-        </div>
-
-        <div id="cei" class="col col-1 offset-1 text-center border border-black  pb-1 pt-1">
-
-        </div>
-
-        <div class="col offset-2 col-1 text-center">
-            <input
-                    type="number"
-                    step="10"
-                    max="100"
-                    min="10"
-                    class="form-control mt-2"
-                    placeholder="%"
-                    style="text-align: center"
-                    id="percent-cei"
-                    value=30
-                    aria-label=""
-            />
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="col offset-2 col-3 border border-black bg-secondary text-light"
-        >
-            <p class="pt-3">TPI</p>
-        </div>
-
-        <div class="col col-1 offset-1">
-            <input
-                    type="number"
-                    step="0.5"
-                    max="6"
-                    min="1"
-                    class="form-control mt-2"
-                    placeholder="Note"
-                    style="text-align: center"
-                    id="tpi"
-                    aria-label=""
-            />
-        </div>
-        <div class="col offset-2 col-1 mx-auto text-center">
-            <input
-                    type="number"
-                    step="10"
-                    max="100"
-                    min="10"
-                    class="form-control mt-2"
-                    placeholder="%"
-                    style="text-align: center"
-                    id="percent-tpi"
-                    value=40
-                    aria-label=""
-            />
-        </div>
-    </div>
-</div>
-
-<!--Note finale----------------------------------------------------------------------------------------------------->
-
-<div class="container mt-4">
-    <div class="row mb-2">
-        <div class="col offset-2 col-8 text-center bg-dark text-light pt-1">
-            <h3>CFC</h3>
-        </div>
-    </div>
-
-    <div id="passOrFailed" class="text-center display-5 pb-4">
-    </div>
-
-    <div class="row mb-2">
-        <div
-                class="
-            col
-            offset-5
-            col-2
-            text-center
-            border border-black
-            pt-1
-          "
-        >
-
-            <h2 id="cfc" class="mb-5 mt-5 display-1 fw-bold"></h2>
-        </div>
-    </div>
-</div>
 
 <script src="script.js"></script>
+
+
 </body>
 </html>
